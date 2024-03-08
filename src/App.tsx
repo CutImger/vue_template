@@ -4,10 +4,10 @@ export default defineComponent({
 	name: 'App',
 	setup() {
 		console.log(import.meta.env.VITE_APP_BASE_URL);
-		
+
 		return () => (
 			<div class='app'>
-				<router-view/>
+				<router-view />
 			</div>
 		);
 	},
