@@ -7,6 +7,9 @@ import postCssPxToRem from 'postcss-pxtorem';
 import legacy from '@vitejs/plugin-legacy';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { compression } from 'vite-plugin-compression2';
+// import AutoImport from 'unplugin-auto-import/vite';
+// import Components from 'unplugin-vue-components/vite';
+// import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,6 +25,22 @@ export default defineConfig({
 			filename: 'stats.html', //分析图生成的文件名
 			open: true, //自动展示
 		}),
+		// AutoImport({
+		// 	imports: [
+		// 		'vue',
+		// 		{
+		// 			'naive-ui': [
+		// 				'useDialog',
+		// 				'useMessage',
+		// 				'useNotification',
+		// 				'useLoadingBar',
+		// 			],
+		// 		},
+		// 	],
+		// }),
+		// Components({
+		// 	resolvers: [NaiveUiResolver()],
+		// }),
 	],
 
 	// 配置基本公共路径

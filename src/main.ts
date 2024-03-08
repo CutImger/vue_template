@@ -4,7 +4,8 @@ import 'amfe-flexible';
 import router from './router'; 
 
 // 引入文件
-import './style.css';
+import 'vfonts/FiraCode.css';
+// import './style.css';
 import App from './App';
 
 const app = createApp(App);

@@ -6,8 +6,10 @@ export default defineComponent({
 		console.log(import.meta.env.VITE_APP_BASE_URL);
 
 		return () => (
-			<div class='app'>
-				<router-view />
+			<div class="app">
+				<n-config-provider>
+					<router-view />
+				</n-config-provider>
 			</div>
 		);
 	},
