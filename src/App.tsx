@@ -8,6 +8,7 @@ import {
 } from 'naive-ui';
 import { useThemeStore } from '@/stores/themeStore';
 import LoadingBarProvider from '@/components/LoadingBarProvider';
+import LoadingRouterView from '@/components/LoadingRouterView';
 
 export default defineComponent({
 	name: 'App',
@@ -24,7 +25,9 @@ export default defineComponent({
 					},
 				}}
 			>
-				<LoadingBarProvider />
+				<LoadingBarProvider>
+					<LoadingRouterView />
+				</LoadingBarProvider>
 			</NConfigProvider>
 		);
 	},
