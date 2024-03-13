@@ -5,7 +5,6 @@ import {
 	NLayoutSider,
 	NLayoutFooter,
 	NMenu,
-	NIcon,
 } from 'naive-ui';
 
 const menuOptions = [
@@ -40,7 +39,9 @@ export default defineComponent({
 								options={menuOptions}
 							/>
 						</NLayoutSider>
-						<NLayout><router-view /></NLayout>
+						<NLayout>
+							<router-view />
+						</NLayout>
 					</NLayout>
 					<NLayoutFooter bordered>Footer Footer Footer</NLayoutFooter>
 				</NLayout>

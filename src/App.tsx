@@ -7,13 +7,12 @@ import {
 	lightTheme,
 } from 'naive-ui';
 import { useThemeStore } from '@/stores/themeStore';
+import LoadingBarProvider from '@/components/LoadingBarProvider';
 
 export default defineComponent({
 	name: 'App',
 	setup() {
 		const themeStore = useThemeStore();
-		console.log(import.meta.env.VITE_APP_BASE_URL);
-
 		return () => (
 			<NConfigProvider
 				theme={themeStore.isDark ? darkTheme : lightTheme}
@@ -25,7 +24,7 @@ export default defineComponent({
 					},
 				}}
 			>
-				<router-view />
+				<LoadingBarProvider />
 			</NConfigProvider>
 		);
 	},
