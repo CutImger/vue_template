@@ -8,7 +8,7 @@ interface ThemeState {
 export const useThemeStore = defineStore('theme', {
 	state: (): ThemeState => ({
 		isDark: false, // 初始主题设为亮色主题
-		primaryColor: '#FF0000', // 初始主题色是'#FF0000'
+		primaryColor: '#1890ff', // 初始主题色是'#1890ff'
 	}),
 	actions: {
 		toggleTheme() {
