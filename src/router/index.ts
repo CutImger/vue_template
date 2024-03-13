@@ -1,21 +1,21 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import Layout from '@/layout/index';
-import Home from '@/views/Home/index';
-import Docs from '@/views/Docs';
-import NotFound from '@/views/Errors/404';
 
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
 		name: 'index',
 		redirect: '/home',
-		component: Layout,
+		component: import('@/layout/Default/index'),
 		children: [
-			{ path: 'home', name: 'home', component: Home },
-			{ path: 'docs', name: 'docs', component: Docs },
+			{ path: 'home', name: 'home', component: import('@/views/Home/index') },
+			{ path: 'docs', name: 'docs', component: import('@/views/Docs') },
 		],
 	},
-	{ path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+	{
+		path: '/:pathMatch(.*)*',
+		name: 'NotFound',
+		component: import('@/views/Errors/404'),
+	},
 ];
 
 const router = createRouter({

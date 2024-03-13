@@ -8,6 +8,8 @@ import legacy from '@vitejs/plugin-legacy';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { compression } from 'vite-plugin-compression2';
 
+// 已经在App.tsx文件中做了切换自定哦主题的操作，所以不在vite.config文件中进行配置
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
@@ -20,7 +22,7 @@ export default defineConfig({
 		visualizer({
 			emitFile: false,
 			filename: 'stats.html', //分析图生成的文件名
-			open: true, //自动展示
+			// open: true, //自动展示
 		}),
 	],
 
@@ -39,12 +41,6 @@ export default defineConfig({
 	},
 
 	css: {
-		// 配置全局样式
-		preprocessorOptions: {
-			less: {
-				additionalData: '@import "@/styles/variables.less";', // 引入全局变量文件
-			},
-		},
 		postcss: {
 			plugins: [
 				autoprefixer({
