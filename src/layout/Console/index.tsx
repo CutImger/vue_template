@@ -6,6 +6,7 @@ import {
 	NLayoutFooter,
 	NMenu,
 } from 'naive-ui';
+import '../Styles/Common.less';
 
 const menuOptions = [
 	{

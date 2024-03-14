@@ -1,11 +1,11 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import 'amfe-flexible';
-import router from './router'; 
+import router from './router';
+
 
 // 引入文件
 import 'vfonts/FiraCode.css';
-// import './style.css';
 import App from './App';
 
 const app = createApp(App);

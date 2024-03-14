@@ -8,7 +8,7 @@ import legacy from '@vitejs/plugin-legacy';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { compression } from 'vite-plugin-compression2';
 
-// 已经在App.tsx文件中做了切换自定哦主题的操作，所以不在vite.config文件中进行配置
+// 已经在App.tsx文件中做了切换自定义主题的操作，所以不在vite.config文件中进行配置
 
 // https://vitejs.dev/config/
 export default defineConfig({

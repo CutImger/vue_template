@@ -1,7 +1,7 @@
 import { defineComponent, ref } from 'vue';
 import { NButton, NIcon, NSpace, NSwitch, NColorPicker } from 'naive-ui';
 import { IosSunny, MdMoon } from '@vicons/ionicons4';
-import { useThemeStore } from '@/stores/themeStore';
+import { useThemeStore } from '@/stores/ThemeStore';
 
 export default defineComponent({
 	name: 'Home',

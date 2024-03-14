@@ -1,14 +1,38 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import useAsyncComponentLoader from '@/hooks/UseAsyncComponentLoader';
+
+// 主框架布局
+import Layout from '@/layout/Default/index';
 
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
 		name: 'index',
-		redirect: '/home',
-		component: import('@/layout/Default/index'),
+		redirect: '/index',
+		component: Layout,
 		children: [
-			{ path: 'home', name: 'home', component: import('@/views/Home/index') },
-			{ path: 'docs', name: 'docs', component: import('@/views/Docs') },
+			{
+				path: 'index',
+				name: 'index',
+				component: useAsyncComponentLoader(import('@/views/Home/index')),
+			},
+			{
+				path: 'docs',
+				name: 'docs',
+				component: useAsyncComponentLoader(import('@/views/Docs')),
+			},
+		],
+	},
+	{
+		path: '/console',
+		redirect: '/console/index',
+		component: useAsyncComponentLoader(import('@/layout/Console/index')),
+		children: [
+			{
+				path: 'index',
+				name: 'consoleHome',
+				component: useAsyncComponentLoader(import('@/views/Home/index')),
+			},
 		],
 	},
 	{
