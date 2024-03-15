@@ -1,12 +1,7 @@
 import { defineComponent } from 'vue';
-import {
-	NLayout,
-	NLayoutHeader,
-	NLayoutSider,
-	NLayoutFooter,
-	NMenu,
-} from 'naive-ui';
+import { NLayout, NLayoutSider, NLayoutFooter, NMenu } from 'naive-ui';
 import '../Styles/Common.less';
+import MainNav from '../Components/MainNav';
 
 const menuOptions = [
 	{
@@ -21,10 +16,7 @@ export default defineComponent({
 		return () => (
 			<div class="Layout">
 				<NLayout>
-					<NLayoutHeader bordered>
-						Header Header Header
-						<NMenu mode="horizontal" options={menuOptions} />
-					</NLayoutHeader>
+					<MainNav />
 					<NLayout hasSider style="height: calc(100vh - 83px)">
 						<NLayoutSider
 							bordered

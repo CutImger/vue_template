@@ -6,7 +6,7 @@ export default defineComponent({
 	name: 'DefaultLoadingErrorComponent',
 	setup() {
 		return () => (
-			<div class="defaultLoadingErrorComponent fullScreen flex">
+			<div class="default-loading-error-component fullScreen flex">
 				<NResult status="500" title="页面加载失败"></NResult>
 			</div>
 		);
